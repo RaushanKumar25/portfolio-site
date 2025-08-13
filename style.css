@@ -38,7 +38,7 @@ body
     text-decoration: none;
     font-weight: 500;
     margin: 35px;
-    transition: .35;
+    transition: 0.35s ease;
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
@@ -139,6 +139,56 @@ body
     0 0 100px cyan, 0 0 200px cyan
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* So text on left, image on right */
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.home-img {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px #0ef;
+    animation: glow 2s infinite alternate;
+    animation: slideFromRight 1s ease forwards, glow 2s infinite alternate;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+}
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Glow animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px rgb(6, 30, 168);
+    }
+    to {
+        box-shadow: 0 0 30px #0ef, 0 0 60px #0ef, 0 0 90px #0ef;
+    }
+}
+
+
+
+
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100%);
@@ -182,5 +232,4 @@ body
         opacity: 1;
     }
 }
-
 
