@@ -6,7 +6,8 @@
 }
 body 
 {
-    color: #ededed
+    color: #ededed;
+    background: #081b29;
 }
 .header 
 {
@@ -15,7 +16,7 @@ body
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #081b29;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,8 +149,8 @@ body
 
 .home-img {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px #0ef;
@@ -161,9 +162,71 @@ body
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     border-radius: 50%;
     border: 5px solid #0ef;
 }
+ .about-img {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-left: 100px;
+    box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px #0ef;
+    animation: glow 2s infinite alternate;
+}
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+}   
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.about-text h2 {
+    font-size: 60px;
+}
+.about-text h2 span {
+    color: #0ef;
+}
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+   font-size: 29px;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+
+
+
+
+
+
 @keyframes slideFromRight {
     0% {
         transform: translateX(100%);
@@ -184,11 +247,6 @@ body
         box-shadow: 0 0 30px #0ef, 0 0 60px #0ef, 0 0 90px #0ef;
     }
 }
-
-
-
-
-
 @keyframes slideRight {
     0% {
         transform: translateX(-100%);
@@ -209,8 +267,6 @@ body
         opacity: 1;
     }
 }
-
-
 @keyframes slideTop {
     0% {
         transform: translateY(100%);
@@ -232,4 +288,7 @@ body
         opacity: 1;
     }
 }
+
+
+
 
