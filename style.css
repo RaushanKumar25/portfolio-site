@@ -328,7 +328,7 @@ section {
 
 }
 .bar {
-    font-size: 23px;
+    font-size: 30px;
 }
 .Technical-bars .bar {
     margin-top: 40px 0;
@@ -365,6 +365,7 @@ section {
     border-radius: 10px;
     animation: animateProgress 1s forwards;
     transform-origin: left;
+    
 }
 
 @keyframes showText {
@@ -387,9 +388,159 @@ section {
 .progress-line.Cpp span { width: 60%; }
 
 .progress-line span::after {
+    content: "";
     position: absolute;
-    padding:
+    padding: 1px 8px;
+    background-color: #0000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: 0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+    z-index: 1;
+
 }
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "80%";
+}
+
+.progress-line.Javascript span::after {
+    content: "70%";
+}
+
+.progress-line.Python span::after {
+    content: "75%";
+}
+
+.progress-line.DSA span::after {
+    content: "62%";
+}
+
+.progress-line.Cloud span::after {
+    content: "84%";
+}
+.progress-line.React span::after {
+    content: "65%";
+}
+.progress-line.Cpp span::after {
+    content: "60%";
+}
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color:#000;
+    top: -14px;
+    right: 10;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+    z-index: 1;
+}
+@keyframes showText { /* Make sure this matches your animation name */
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Container Styling */
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.heading1 {
+  width: 100%;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Radial Bar Styling */
+.radial-bars {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Background Circle */
+.progress-bar {
+  fill: none;
+  stroke: black;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+/* Animated Path */
+.path {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 502;   /* circumference = 2πr (r=80) */
+  stroke-dashoffset: 502;  /* hidden initially */
+  animation: progress 1.5s ease forwards;
+}
+
+/* Individual Skill Colors */
+.path-1 { stroke: #0ef; animation-delay: 0.3s; }  /* Creativity */
+.path-2 { stroke: #0ef; animation-delay: 0.6s; }  /* Communication */
+.path-3 { stroke: #0ef; animation-delay: 0.9s; }  /* Problem Solving */
+.path-4 { stroke: #0ef; animation-delay: 1.2s; } 
+.path-5 { stroke: #0ef; animation-delay: 1.2s; }  
+
+/* Text Inside Bars */
+.percentage {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Animation Keyframes */
+@keyframes progress {
+  from {
+    stroke-dashoffset: 502;
+  }
+  to {
+    stroke-dashoffset: var(--offset);
+  }
+}
+
+/* Custom Dashoffsets based on percentage */
+.path-1 { --offset: calc(502 - (502 * 90) / 100); }
+.path-2 { --offset: calc(502 - (502 * 75) / 100); }
+.path-3 { --offset: calc(502 - (502 * 65) / 100); }
+.path-4 { --offset: calc(502 - (502 * 85) / 100); }
+.path-5 { --offset: calc(502 - (502 * 60) / 100); }
+
+
 
 
 
