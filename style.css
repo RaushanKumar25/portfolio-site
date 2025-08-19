@@ -320,10 +320,19 @@ body
     flex-wrap: wrap;
 }
 .container1 {
-    width: 600;
+    width: 600px;
     height: 500px;
     padding: 75px 100px;
     margin-left: 120px
+}
+.container1 {
+    width: 600px;
+    height: auto;
+    padding: 40px 50px;
+    margin: 40px 0 40px 120px;
+    background: #1e1e1e;   /* dark gray main box */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
 }
 .heading1 {
     text-align: center;
@@ -338,9 +347,64 @@ body
 .Technical-bars .bar {
     margin: 40px 0;
 }
-.Technical-bars  {
-
+.Technical-bars .bar:first-child {
+    margin-top: 0;
 }
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar {
+    margin: 25px 0;
+    padding: 10px;
+    background: #2a2a2a;   /* inner box for each bar */
+    border-radius: 10px;
+}
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+     transform: scaleX(0);
+}
+
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 80%; }
+.progress-line.Javascript span { width: 70%; }
+.progress-line.Python span { width: 79%; }
+.progress-line.Cpp span { width: 70%; }
+.progress-line.DSA span { width: 60%; }
+.progress-line.Cloud span { width: 88%; }
+.progress-line.React span { width: 50%; }
+
+
+
+
+
 
 
 @keyframes slideFromRight {
