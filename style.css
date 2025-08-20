@@ -294,7 +294,7 @@ body
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
-     justify-content: space-between; 
+    justify-content: space-between; 
     font-weight: 600;
     opacity: 0;
      animation: slideTop 1s ease forwards;
