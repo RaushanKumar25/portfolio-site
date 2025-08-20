@@ -326,13 +326,14 @@ body
     margin-left: 120px
 }
 .container1 {
-    width: 600px;
+    width: 900px;
     height: auto;
-    padding: 40px 50px;
-    margin: 40px 0 40px 120px;
-    background: #1e1e1e;   /* dark gray main box */
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    padding: 60px 70px;
+    margin: 40px 0 40px 80px;
+    background-color: transparent;   /* same as services */
+    border-radius: 20px;
+     box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #012290f7;
 }
 .heading1 {
     text-align: center;
@@ -365,7 +366,7 @@ body
 .Technical-bars .bar {
     margin: 25px 0;
     padding: 10px;
-    background: #2a2a2a;   /* inner box for each bar */
+    /* background: #2a2a2a; */
     border-radius: 10px;
 }
 .Technical-bars .bar .progress-line {
@@ -377,6 +378,7 @@ body
     animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
+    height: 8px;
 }
 @keyframes animate {
     100% {
@@ -389,7 +391,8 @@ body
     position: absolute;
     border-radius: 10px;
      animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-     transform: scaleX(0);
+     transform: scaleX(1);
+     transform-origin: left;
 }
 
 .progress-line.html span { width: 90%; }
@@ -399,7 +402,128 @@ body
 .progress-line.Cpp span { width: 70%; }
 .progress-line.DSA span { width: 60%; }
 .progress-line.Cloud span { width: 88%; }
-.progress-line.React span { width: 50%; }
+/* .progress-line.React span { width: 50%; } */
+/* 
+/* .progress-line {
+    position: relative;
+    height: 8px;
+    width: 100%;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+} */
+
+.pprogress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+/* ✅ Percentage label on each span end */
+.progress-line.html span::after {
+  content: "90%";
+  position: absolute;
+  top: -25px;        /* above the bar */
+  right: 0;          /* end of span */
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.css span::after {
+  content: "80%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.Javascript span::after {
+  content: "70%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.Python span::after {
+  content: "79%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.Cpp span::after {
+  content: "70%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.DSA span::after {
+  content: "60%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.progress-line.Cloud span::after {
+  content: "88%";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 
 
 
