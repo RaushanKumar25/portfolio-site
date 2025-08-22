@@ -649,7 +649,12 @@ body
 .row:hover img {
   transform: scale(1.1); /* zoom effect */
 }
-
+.main-text h2 {
+    color: white
+}
+.main-text span {
+    color: #0ef
+}
 
 .layer {
   width: 100%;
