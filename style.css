@@ -775,7 +775,7 @@ body
     width: 90%;
     padding: 18px;
     background: #555557;
-    color: #000;
+    color: white;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -814,10 +814,25 @@ body
     background: rgb(7, 85, 91);
     font-weight: 300;
     margin-top: 70px;
+}.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0ef;  /* button background */
+    color: white;        /* arrow color */
+    font-size: 24px;     /* arrow size */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
 }
-.top {
-    position
+.top:hover {
+    background: #0ef;
 }
+
 
 
 
